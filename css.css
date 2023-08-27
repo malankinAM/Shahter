@@ -1,0 +1,120 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+html{
+  font-size: 10px;
+}
+canvas {
+	top:0;
+	left: 0;
+    background:#000; 
+    width: 100%;
+}
+  .class img{
+   width:30rem;
+  }
+  .card {
+    width: 64rem;
+    height: 40rem;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 120rem;
+    perspective: 120rem;
+    transition: 1s;
+  }
+  .card:hover {
+    transform: rotate(-5deg);
+  }
+  .card:hover .outside {
+    transform: rotateY(-130deg);
+  }
+  .outside,
+  .inside {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+  }
+  .inside {
+    background: linear-gradient(to right, #131313, #181717 30%);
+    line-height: 3;
+    padding: 0 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    left: 50%;
+  }
+  .outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+  }
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+  }
+  .front {
+    background-color: #070707;
+    border: 2px solid white;
+  }
+  .back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #0c0c0c, #0b0b0b 30%);
+  }
+  .cake {
+    width: 100%;
+    position: absolute;
+    bottom: 3rem;
+  }
+  
+ 
+  .outside p {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    text-align: center;
+    letter-spacing: 0.6rem;
+    color: #121212;
+  }
+  .inside h1 {
+    font-size: 12rem;
+    line-height: 12rem;
+  }
+
+  @media (max-width:360px){
+    html{
+font-size: 15px;
+    }
+  }
+  @media (max-width:450px){
+    html{
+font-size: 15px;
+    }
+  }
+  @media (max-width:600px){
+    html{
+font-size: 30px;
+    }
+  }
+
+
